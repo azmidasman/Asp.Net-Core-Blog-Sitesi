@@ -1,0 +1,64 @@
+Makale
+Kategori
+Yorumlar
+Yazarlar
+Hakkýmda
+Ýletiþim
+Adres
+
+------------------------------------------
+
+NEDEN KATMANLI MÝMARÝ?
+-Kod tekrarýný önlemektir. Literatürdeki adý DRY(Dont Repeat Yourself)
+-Projeye olan hakimiyet artýr.
+-Kod okunaklýðý, clean code saðlanýr.
+-Hata yönetimi kolaylaþýr.
+
+--N Tier Architecture kullanacaðýz--
+*Entity Layer
+*Data Access Layer
+*Businnes Layer
+*Presentation Layer
+*Core Layer
+*Api
+
+-------------------------------------------
+Entity Layer: Varlk katmanýdýr. Projemizde bulunan tablolar ve bu tablolarýn içerisindeki sütunlarýmýz yer alýr.
+Bu tablolar visual studio üzerinde birer CLASS olarak tutulur. 
+
+Data Access Layer: Veri eriþim katmanýdýr. CRUD (Create Read Update Delete) operasyonlarýnýn temelini oluþturur.
+
+Businnes Layer: Validation, geçerlilik ve doðrulama iþlemlerinin ypaýldýðý katmandýr. 
+
+Presentation Layer: Sunum, UI iþlemlerinin olduðu katmandýr. Backhand iþlemleri de controller tarafýnda yazýlýr. 
+Bazý yerlerde User Interface olarak adlandýrýlýr.
+--------------------------------------------
+
+Concrete Klasörü: Somut ifadeleri gireceðiz. Class gibi..
+Abstract Klasörü: Soyutr ifadelerdir. Interfaces gibi...
+
+---------------------------------------------
+Data Access Katmanýnda kurmamýz gereken paketler:
+EntityFrameWork Core
+EntityFrameWork Design =>ORM iþlemleri için lazým olacak.
+EntityFrameWork SQL Server
+EntityFrameWork Tools
+---------------------------------------------
+MIGRATION
+View=>Other Windows=>Package Manager Console
+Default Project olarak data access layer seçilmeli. COntext sýnýfýmýz data access'de olduðu için bu katmaný seçmemiz lazým.
+add-migration mig1 yaz gönder.
+update-database demen lazým ki sql serverda görebilesin.
+---------------------------------------------
+
+---GENERIC REPOSITORY---
+
+-Her bir crud operasyonuna ait bir metot tanýmlanacak.
+-Metodlarýn imzasý olarak interfaceler kullanýlacak.
+-Abstract üzerinde soyut ifade olarak interfaceler'i tanýmla
+-Concrete üzerinde somut ifade olarak bu interface'ler içinde yer alan metotlarýn içini doldur.
+**Yani abstract'ta imzayý atacaksýn, Concrete'te bu imzanýn altýný dolduracaksýn.
+
+Generic olduðu zaman BÜTÜNe uygulanacak.
+
+Ekleme-Silme-Güncelleme iþlemleri için VOID kullanacaksýn.

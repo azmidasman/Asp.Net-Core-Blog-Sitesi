@@ -1,0 +1,18 @@
+﻿Business katmanında Abstract Klasörü içinde yer alan intefaceler service olarak adlandırılıuyor.
+Businnes katmanında Concrete Klasörü içinde yer alan sınıflar Manager olarka adlandırılır.
+
+Bizim 4 Temel katmanımız vardı.
+Entity Layer: Entitylerimizi tanımladık.
+Data Access Layer: Crud operasyonlarımızı yazdık.
+Business Layet: Validasyon, geçerlilik kurallarımızı yazacağız. Kontrolleri burada yapacağız.
+
+Örneğin bir tane blog ekleyeceğiz. Şartlarımız şunlar:
+-Blog adı boş geçilemez.
+-Content alanı boş geçilemez.
+-Yazılma tarihi boş geçilemez.
+-Bloğun mutlaka bir kategorisi olmak zorundadır.
+-Blog adı en fazla 50 karakter olabilir.
+-Blogda kullanılan resim maximum 2 mb olmalı.
+-Bloğun en az 5 karakterden oluşan bir başlığı olmalıdır.
+
+İşte bu yapının ismi geçerlilik kuralları(Validation)'dur. 

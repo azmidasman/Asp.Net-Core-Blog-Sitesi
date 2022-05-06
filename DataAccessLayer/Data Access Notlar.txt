@@ -1,0 +1,11 @@
+﻿-----------------------------------------
+Context klasöründe bağlantı adresimizi tanıtıcaz.
+Core ile beraber mvc veya .net framework gibi appconfig dosyası yok. Bu bağlantı classını context.cs oluşturmamız lazım.
+DBContext sınıfından da miras alması lazım.
+Options builder ile connection string tanımladım.
+-------------------------------------------
+Data Access katmanında entity katmanında yer alan değerler kullanılır.
+Businnes i,çerisinde hem data access hem entity kullanılır.
+Presentation'da hem businnes hem data access hem entity kullanılır. 
+-------------------------------------------
+Data access içerisinde crud işlemlerine dahil olacak entity değerlerini kullanacağız.

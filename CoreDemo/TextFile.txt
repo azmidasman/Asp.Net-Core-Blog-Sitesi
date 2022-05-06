@@ -1,0 +1,26 @@
+﻿------------------------------------------
+
+NEDEN KATMANLI MİMARİ?
+-Kod tekrarını önlemektir. Literatürdeki adı DRY(Dont Repeat Yourself)
+-Projeye olan hakimiyet artır.
+-Kod okunaklığı, clean code sağlanır.
+-Hata yönetimi kolaylaşır.
+
+--N Tier Architecture kullanacağız--
+*Entity Layer
+*Data Access Layer
+*Businnes Layer
+*Presentation Layer
+*Core Layer
+*Api
+
+-------------------------------------------
+Entity Layer: Varlk katmanıdır. Projemizde bulunan tablolar ve bu tabloların içerisindeki sütunlarımız yer alır.
+Bu tablolar visual studio üzerinde birer CLASS olarak tutulur. 
+
+Data Access Layer: Veri erişim katmanıdır. CRUD (Create Read Update Delete) operasyonlarının temelini oluşturur.
+
+Businnes Layer: Validation, geçerlilik ve doğrulama işlemlerinin ypaıldığı katmandır. 
+
+Presentation Layer: Sunum, UI işlemlerinin olduğu katmandır. Backhand işlemleri de controller tarafında yazılır. 
+Bazı yerlerde User Interface olarak adlandırılır.
